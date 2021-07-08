@@ -1,0 +1,364 @@
+/* ================ 表格 el-table ================ */
+
+/* 统一设置表格el-table的斑纹颜色 */
+.el-table tr.el-table__row--striped td {
+  background: #e6f2ff !important;
+}
+
+/* 统一设置表格el-table的悬停、激活颜色 */
+.el-table tr.el-table__row.hover-row td,
+.el-table tr.el-table__row.current-row td {
+  background: #b4d8ff !important;
+}
+
+/* 解决表格存在固定列时，底部滚动条无法点击 */
+.el-table .el-table__body-wrapper {
+  z-index: 1;
+}
+
+/* 表格，表头，合计行，字体黑色 */
+.el-table,
+.el-table thead,
+.el-table__fixed-footer-wrapper .el-table__footer .cell {
+  color: #000;
+}
+
+/* 表格合计行，固定列，top边框对齐 */
+.el-table__fixed-footer-wrapper .el-table__footer .cell {
+  margin-top: -1px;
+}
+
+/* 表格合计行，top边框显示 */
+.el-table__footer-wrapper {
+  margin-top: 0px;
+}
+
+/* 缩小表格内单元内边距，及固定列最小宽度 */
+.el-table th > .cell,
+.el-table--border td:first-child .cell,
+.el-table--border th:first-child .cell,
+.el-table .cell.el-tooltip,
+.el-table .cell {
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 0px;
+}
+
+/* 缩小表格合计行内边距（高度） */
+.el-table__footer .is-leaf {
+  padding: 0px;
+}
+
+/* 表头行，合计行，文本不换行 */
+.el-table th > .cell,
+.el-table__footer .cell {
+  white-space: nowrap;
+}
+
+/* 修改表格边框颜色 */
+.el-table td,
+.el-table--border td,
+.el-table--border th,
+.el-table td.is-right,
+.el-table th.is-leaf,
+.el-table__footer .is-leaf,
+.el-table--border,
+.el-table--group {
+  border-color: #bbb;
+}
+
+/* 处理fixed列，下方滚动条显示不全，原为1px */
+.el-table__fixed-right::before,
+.el-table__fixed::before {
+  height: 0px;
+}
+
+.el-table__row .el-input--mini .el-input__icon,
+.el-table__row .el-input-number--mini {
+  line-height: 22px;
+}
+
+.el-table__row .el-input--mini .el-input__inner,
+.el-table__row .el-input-number--mini .el-input__inner {
+  height: 22px;
+  line-height: 22px;
+}
+
+/* ================ 表单 el-form ================ */
+/* 防止重合 */
+.el-form {
+  margin-top: 2px;
+}
+
+/* 表单项目文本，字体黑色 */
+.el-form-item__label {
+  color: #000;
+}
+
+/* 缩小表单项行间距 */
+.el-form-item--mini.el-form-item {
+  margin-bottom: 5px;
+}
+
+/* 缩小label字体右边距 */
+.el-form-item__label {
+  padding-right: 5px;
+}
+
+/* ================ 输入框 el-input ================ */
+
+/* 缩小输入框，内部padding */
+/* 输入框边框颜色 */
+.el-input__inner,
+.el-textarea__inner {
+  padding: 0 5px;
+  border-color: #666;
+  color: #000;
+}
+
+/* 修改多行文本字体 */
+.el-textarea__inner {
+  font-family: "Arial";
+}
+
+/* 缩小上下箭头的宽度 */
+.el-input-number--mini .el-input-number__decrease,
+.el-input-number--mini .el-input-number__increase {
+  width: 16px;
+}
+
+/* 缩小数值输入框内边距 */
+.el-input-number.is-controls-right .el-input__inner {
+  padding-left: 5px;
+  padding-right: 22px;
+  text-align: right;
+}
+
+/* 缩小数值输入框内边距 */
+.el-input-number.is-without-controls .el-input__inner,
+.el-input-number--mini .el-input__inner {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: right;
+}
+
+/* 隐藏浮点数输入框递增递减两个按钮 */
+.input-float .el-input-number__decrease,
+.input-float .el-input-number__increase {
+  display: none;
+}
+
+/* 查询过滤单行表单不拉伸 */
+.el-form.el-form--inline {
+  flex: none;
+}
+
+/* ================ 分割栏 gutter ================ */
+
+/* 分割栏背景颜色 */
+.gutter.gutter-vertical,
+.gutter.gutter-horizontal {
+  background-color: #e6f2ff;
+}
+
+/* ================ 标题栏 el-page-header ================ */
+
+/* 修改标题位置等 */
+.el-page-header__left {
+  flex: none;
+  margin-right: 0px;
+  /* display: none; */
+}
+
+/* 修改标题位置等 */
+.el-page-header__content {
+  flex: auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ================ 标题栏 el-page-header ================ */
+
+/* 布局 */
+.el-tabs.el-tabs--top,
+.el-tabs__content,
+.el-tab-pane {
+  flex: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 顶部布局方向 */
+.el-tabs.el-tabs--top {
+  flex-direction: column;
+}
+
+/* 头部布局 */
+.el-tabs__header {
+  margin: 0px;
+  flex: none;
+}
+
+/* 头部项目布局 */
+.el-tabs__item,
+.el-tabs__item.is-bottom.is-closable,
+.el-tabs--bottom.el-tabs--border-card > .el-tabs__header .el-tabs__item:last-child,
+.el-tabs--bottom.el-tabs--border-card > .el-tabs__header .el-tabs__item:nth-child(2) {
+  padding: 0 5px;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* ================ 树 el-tree ================ */
+
+.el-tree {
+  /* 父标签的display不能用flex否则tree横向滚动条不显示，必须block，直接再套一个div */
+  display: inline-block;
+  min-width: 100%;
+  color: #000;
+}
+
+/* 树焦点项目 */
+.el-tree-node.is-current > .el-tree-node__content {
+  background-color: #b4d8ff;
+}
+
+/* 树节点高度 */
+.el-tree-node__content {
+  height: 22px;
+}
+
+/* ================ 其它 ================ */
+/* 缩小气泡提示框 */
+/* .el-tooltip__popper {
+  padding: 5px !important;
+} */
+
+/* 复选框文字字体大小 */
+.el-checkbox__label {
+  font-size: 12px;
+  color: #000;
+}
+
+/* 加载提示框图标大小 */
+.el-loading-mask.is-fullscreen .el-loading-spinner {
+  font-size: 64px;
+}
+
+/* 加载提示框文字大小 */
+.el-loading-mask.is-fullscreen .el-loading-spinner .el-loading-text {
+  font-size: 24px;
+}
+
+/* 菜单栏 箭头颜色 */
+.el-submenu__title i {
+  color: #fff;
+}
+
+/* 统一下拉框选项高度 */
+.el-select-dropdown__item {
+  height: 29px !important;
+  line-height: 29px !important;
+}
+
+/* 统一下拉框选项悬停背景颜色 */
+.el-select-dropdown__item.hover {
+  background-color: #b4d8ff !important;
+}
+
+/* ================ 步骤条 ================ */
+.el-step__head:hover,
+.el-step__title:hover {
+  color: #67c23a;
+  border-color: #67c23a;
+  cursor: pointer;
+}
+
+/* ================ 布局 ================ */
+/* 修复没有内容时，占位无效 */
+.el-col {
+  min-height: 1px;
+}
+
+/* ================ 自定义 ml- ================ */
+
+.ml-root {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20px);
+  height: calc(100% - 10px);
+  padding: 10px 10px 0px 10px;
+}
+
+.ml-caption {
+  flex: none;
+}
+
+.ml-pb10 {
+  padding-bottom: 10px;
+}
+
+.ml-auto-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: auto;
+}
+
+.ml-auto-col-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  flex-direction: column;
+}
+
+.ml-auto-row-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  flex-direction: row;
+}
+
+.ml-none-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: none;
+}
+
+.ml-none-col-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: none;
+  flex-direction: column;
+}
+
+.ml-none-row-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: none;
+  flex-direction: row;
+}
+
+.ml-tool-button {
+  padding: 7px;
+}
+
+.ml-overflow-hidden {
+  overflow: hidden;
+}
+
+.ml-overflow-auto {
+  overflow: auto;
+}
+
+.ml-font-size-14px {
+  font-size: 14px;
+}
+

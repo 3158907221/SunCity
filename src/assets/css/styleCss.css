@@ -1,0 +1,31 @@
+.red_button {
+    color: 	#DC143C;
+    border-color: #DC143C;
+}
+.red_button:hover {
+    color: 	#DC143C;
+    border-color: #DC143C;
+    background-color: #FFC0CB;
+}
+.search_button {
+    color: #ffffff;
+    background-color: #DC143C;
+    border-color: #DC143C;
+}
+.search_button:hover {
+    color: 	#DC143C;
+    border-color: #DC143C;
+    background-color: #FFC0CB;
+}
+.text_button {
+    color: #DC143C;
+}
+.text_button:hover {
+    color: 	#FFC0CB;
+}
+.red {
+    color: 	#DC143C;
+}
+.font {
+    font-size: 12px;
+}
