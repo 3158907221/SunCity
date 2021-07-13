@@ -161,6 +161,8 @@
 </template>
 
 <script>
+	import {exportFile} from '@/api/accountBalance/index.js'
+
 	export default {
         data() {
 	        return {
@@ -209,7 +211,7 @@
 			// 当前页
 			handleCurrentChange(val) {
 				this.currentPage = val;
-			}
+            }
 		}
 	}
 </script>

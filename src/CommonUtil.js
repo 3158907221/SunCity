@@ -315,6 +315,8 @@ let CommonUtil = {
    * @return {*} 返回Promise，可使用await同步
    */
   post(url, params, success, fail) {
+  	console.log(url)
+	  console.log(params)
     return this.axios
       .post(url, params)
       .then(async (response) => {

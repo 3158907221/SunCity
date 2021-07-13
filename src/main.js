@@ -7,6 +7,7 @@ import "element-ui/lib/theme-chalk/index.css";
 import echarts from "echarts";
 import CommonUtil from "./CommonUtil";
 import Contextmenu from "./components/other/Contextmenu/index";
+import 'default-passive-events'
 import "./assets/css/styleCss.css"
 
 Vue.config.productionTip = false;
@@ -18,7 +19,7 @@ axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded
 // 请求拦截器，检查前端登录cookie
 let lastLoginOutDate = new Date(0);
 axios.interceptors.request.use((config) => {
-  // console.log(config.url);
+  console.log(config.url);
   if (config.url !== "/api/sys/getUserByToken") {
     if (CommonUtil.Cookie.getProlongUser() === null) {
       let current = new Date();

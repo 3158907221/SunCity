@@ -1,13 +1,22 @@
-.red_button {
+.red_button,
+.red_button:focus{
     color: 	#DC143C;
     border-color: #DC143C;
+    background-color: #FFFFFF;
 }
 .red_button:hover {
     color: 	#DC143C;
     border-color: #DC143C;
     background-color: #FFC0CB;
 }
-.search_button {
+.red_button.is-active,
+.red_button:active {
+    color: 	#DC143C;
+    border-color: #DC143C;
+    background-color: #FFC0CB;
+}
+.search_button,
+.search_button:focus{
     color: #ffffff;
     background-color: #DC143C;
     border-color: #DC143C;
