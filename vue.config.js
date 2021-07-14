@@ -9,7 +9,7 @@ module.exports = {
   assetsDir: "./assets", // 改成相对路径，默认为assets
   indexPath: "index.html",
   devServer: {
-    port: 8080,
+    port: 9090,
     proxy: {
       "/api": {
         target: env.VUE_APP_URL_STRING,

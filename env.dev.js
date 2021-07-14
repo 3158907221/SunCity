@@ -1,6 +1,6 @@
 "use strict";
 
-const VUE_APP_URL = "http://localhost:9090";
+const VUE_APP_URL = "http://localhost:8080";
 const LOGIN_URL = "http://127.0.0.1/login?title=员工考勤查询&url=";
 const PROJECT_NAME = "prjEmployeeQuery";
 const COOKIE_TIMEOUT = 3600 * 1000;
